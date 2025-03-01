@@ -1,6 +1,86 @@
+:root {
+  --font_text: "Poppins", sans-serif;
+  --font_title: "Sen", sans-serif;
+  --color_text: #929089;
+  --color_one: #ffb82b;
+  --color_two: #161102;
+}
 * {
   box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: var(--font_text);
+}
+/* ==================================common================================ */
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.main-content {
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 60px);
+}
+.bttn {
+  min-width: 118px;
+  color: white;
+  background-color: var(--color_two);
+  padding: 0px 16px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+/* ==================================header================================ */
+.header {
+  background-color: #f4f3ec;
+}
+.header.fixed {
+  position: sticky;
+  top: -24px;
+  z-index: 1000;
+}
+.header .body {
+  /* height: 1000px; */
+  padding: 36px 0px 12px;
+  display: flex;
+  align-items: center;
+}
+.header .nav {
+  margin-left: auto;
+}
+.header ul {
+  display: flex;
+}
+.header .nav a {
+  color: var(--color_text);
+  padding: 6px 21px;
+  position: relative;
+}
+.header .nav a:hover {
+  color: black;
+  text-shadow: 0.5px 0px 0px currentColor;
+}
+.header .nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+.header .nav a:hover::after {
+  width: 100%;
+}
+.header .bttn_sign_up {
+  min-width: 144px;
+}
+.action {
+  margin-left: 49px;
 }
