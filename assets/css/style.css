@@ -20,6 +20,9 @@ a {
   text-decoration: none;
   display: inline-block;
 }
+button:hover {
+  cursor: pointer;
+}
 .main-content {
   width: 1170px;
   margin: 0 auto;
@@ -39,6 +42,13 @@ a {
   color: #5f5b53;
   font-size: 1.8rem;
   line-height: 1.67;
+}
+.heading-level-two {
+  font-family: var(--font_title);
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.27;
+  letter-spacing: -2%;
 }
 /* ==================================header================================ */
 .header {
@@ -177,15 +187,25 @@ a {
   min-width: 180px;
   background-color: var(--color_one);
   line-height: 6.4rem;
+  border: 2px solid var(--color_one);
+}
+.hero-content .cta .btn-two:hover {
+  background-color: transparent;
+  color: var(--color_one);
 }
 .hero .watch {
-  border: none;
+  display: inline-block;
+  border: 2px solid transparent;
   display: flex;
   background-color: transparent;
   margin-left: 28px;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  padding: 14px;
+  border-radius: 999px;
+}
+.hero .watch:hover {
+  border-color: var(--color_one);
 }
 .hero .watch .play {
   width: 40px;
@@ -216,4 +236,112 @@ a {
 }
 .hero .strong-one {
   margin-top: 8px;
+}
+.popular-courses {
+  padding: 60px 0;
+  margin-top: 140px;
+}
+.popular-courses-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-courses-top .descript {
+  margin-top: 16px;
+  width: 458px;
+}
+.popular-courses .control {
+  display: flex;
+  gap: 18px;
+}
+.popular-courses-top .controls {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: var(--color_one) 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.control .left {
+  background-color: white;
+  color: var(--color_one);
+}
+.control .left:hover {
+  background-color: var(--color_one);
+  color: white;
+}
+.control .right {
+  background-color: var(--color_one);
+  color: white;
+}
+.control .right:hover {
+  background-color: white;
+  color: var(--color_one);
+}
+.popular-courses-bottom {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  margin-top: 55px;
+  /* background-color: blue; */
+}
+.popular-courses-bottom .course {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  transition: box-shadow 0.5s ease-in-out; /* Chuyển động mượt mà trong 0.5s */
+}
+.popular-courses-bottom .course:hover {
+  border: 1px solid transparent;
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.5);
+}
+.popular-courses-bottom .contain-thumb {
+  height: 278px;
+  overflow: hidden;
+}
+.popular-courses-bottom .thumb {
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+  height: 278px;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out; /* Hiệu ứng mượt */
+}
+.popular-courses-bottom .thumb:hover {
+  transform: scale(1.2); /* Phóng to 10% */
+}
+.popular-courses-bottom .course-info {
+  padding: 16px 22px 22px;
+}
+.popular-courses-bottom .h-course-info,
+.popular-courses-bottom .f-courses-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular-courses-bottom .h-course-info .heading-level-three,
+.popular-courses-bottom .price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+  color: black;
+}
+.popular-courses-bottom .h-course-info .rating {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+.popular-courses-bottom .h-course-info span {
+  color: var(--color_one);
+}
+.popular-courses-bottom .f-courses-info {
+  margin-top: 12px;
+}
+.btn-four {
+  border: none;
+  transition: background-color 0.15s ease-in-out; /* Chuyển màu nền trong 0.5s */
+}
+.popular-courses-bottom .btn-four:hover {
+  background-color: var(--color_one);
 }
