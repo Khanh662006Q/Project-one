@@ -457,8 +457,13 @@ button:hover {
   padding: 96px 0px;
   background: #2e2100;
 }
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
 .feedback-item {
   display: flex;
+  flex-shrink: 0;
 }
 .feedback-item .avatar {
   width: 72px;
@@ -485,6 +490,11 @@ button:hover {
   height: 6px;
   background: #634700;
   border-radius: 50%;
+  cursor: pointer;
+}
+.feedback-item .dot.active {
+  background: var(--color_one);
+  cursor: default¡;
 }
 .feedback-item .feedback-content {
   width: 66%;
