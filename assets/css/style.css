@@ -28,6 +28,9 @@ body {
 a {
   text-decoration: none;
   display: inline-block;
+  display: flex;
+  justify-content: center; /* Căn giữa ngang */
+  align-items: center; /* Căn giữa dọc */
 }
 button:hover {
   cursor: pointer;
@@ -134,6 +137,9 @@ button:hover {
 }
 .header .btn_sign_up {
   min-width: 144px;
+}
+.btn_sign_up:hover {
+  background: var(--color_one);
 }
 .action {
   margin-left: 49px;
@@ -541,6 +547,13 @@ button:hover {
 .feature .content {
   width: 41%;
 }
+.feature .btn-second {
+  border: 2px solid var(--color_one);
+}
+.feature .btn-second:hover {
+  background: white;
+  color: var(--color_one);
+}
 .feature-two {
   margin-top: 70px;
   padding: 65px 0px;
@@ -552,4 +565,184 @@ button:hover {
 }
 .feature-two .content {
   width: 49%;
+}
+.feature-two .btn-second {
+  border: solid 2px var(--color_one);
+}
+.feature-two .btn-second:hover {
+  background: white;
+  color: var(--color_one);
+}
+/* ============blog============= */
+.blog {
+  margin-top: 70px;
+  padding: 65px 0px;
+  background: #fffcf4;
+}
+.blog .title-blog {
+  text-align: center;
+}
+.blog .title-blog .descript {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  width: 448px;
+  margin: 16px auto 55px;
+}
+.blog .list-blog {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+.blog .list-blog .item-blog {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out; /* Chuyển động mượt mà trong 0.5s */
+  flex-shrink: 0;
+  width: calc((100% - 60px) / 3);
+}
+.blog .list-blog .item-blog:hover {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.5);
+}
+.blog .item-blog .thumb {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out;
+  height: 278px;
+}
+.blog .item-blog .contain-thumb {
+  overflow: hidden;
+  height: 278px;
+}
+.blog .item-blog .thumb:hover {
+  transform: scale(1.2); /* Phóng to 10% */
+}
+.blog .item-blog .infor {
+  padding: 20px 20px 28px;
+}
+.blog .item-blog .infor span {
+  font-size: 1.4rem;
+  line-height: 1.86;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 12px;
+}
+.blog .infor span::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color_one);
+  margin-right: 4px;
+}
+.blog .infor span::after {
+  content: "";
+  display: inline-block;
+  width: 160px;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+  position: absolute;
+  right: -27px;
+  bottom: 0;
+}
+.blog .infor .title {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  margin-top: 12px;
+}
+.blog .infor .btn-four {
+  font-size: 1.33rem;
+  margin-top: 10px;
+}
+.blog .btn-four:hover {
+  background-color: var(--color_one);
+}
+.blog .dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 38px;
+}
+.blog .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #5f5b53;
+}
+.blog .dot.active {
+  cursor: default;
+  background: var(--color_one);
+}
+.footer {
+  background: #2e2100;
+  padding-top: 96px;
+}
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+.footer .column {
+  width: 21.7%;
+}
+.footer .column:first-child {
+  width: 35%;
+}
+.footer .column .descript {
+  margin-top: 18px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  max-width: 267px;
+}
+.footer .social {
+  display: flex;
+  margin-top: 18px;
+  gap: 18px;
+}
+.footer .social a {
+  color: white;
+}
+.footer .title {
+  display: inline-block;
+  border-bottom: 1px solid #59554b;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  padding: 0px 48px 14px 0px;
+}
+.footer ul {
+  margin-top: 28px;
+}
+.footer ul a {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  display: block;
+  margin-top: 12px;
+}
+.footer ul strong {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+.footer .copyright {
+  padding: 28px 0px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #59554b;
 }
