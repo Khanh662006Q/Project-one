@@ -1,11 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 10 version
+*/
+
 :root {
   --font_text: "Poppins", sans-serif;
   --font_title: "Sen", sans-serif;
   --color_text: #929089;
   --color_one: #ffb82b;
   --color_two: #161102;
+  --line-clamp: 1;
 }
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -22,6 +31,21 @@ a {
 }
 button:hover {
   cursor: pointer;
+}
+.break-all {
+  word-break: break-all;
+}
+.line-clam {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clam.two-line {
+  --line-clamp: 2;
+}
+.line-clam.three-line {
+  --line-clamp: 3;
 }
 .main-content {
   width: 1170px;
@@ -55,6 +79,7 @@ button:hover {
   background-color: #fffcf4;
 }
 .header.fixed {
+  position: -webkit-sticky;
   position: sticky;
   top: -28px;
   z-index: 1000;
@@ -62,13 +87,19 @@ button:hover {
 .header .body {
   /* height: 1000px; */
   padding: 36px 0px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .header .nav {
   margin-left: auto;
 }
 .header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .header .nav a {
@@ -88,6 +119,8 @@ button:hover {
   width: 0;
   height: 2px;
   background-color: black;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
 .header .nav a:hover::after {
@@ -105,6 +138,8 @@ button:hover {
   background-color: #fffcf4;
 }
 .body-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .hero-media,
@@ -118,6 +153,7 @@ button:hover {
 .hero-media .img {
   width: 470px;
   height: 685px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -131,7 +167,11 @@ button:hover {
   border-radius: 20px;
 }
 .hero-media .item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .hero-media .item + .item {
@@ -141,8 +181,14 @@ button:hover {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #faf6e6;
   margin-right: 16px;
@@ -163,7 +209,7 @@ button:hover {
   font-size: 1.8rem;
 }
 .hero-content {
-  padding-left: 130px;
+  padding-left: 116px;
   padding-top: 64px;
 }
 .heading {
@@ -179,8 +225,12 @@ button:hover {
 }
 .hero-content .cta {
   margin-top: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   /* justify-content: center; */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .hero-content .cta .btn-two {
@@ -196,10 +246,16 @@ button:hover {
 .hero .watch {
   display: inline-block;
   border: 2px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: transparent;
   margin-left: 28px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 14px;
   border-radius: 999px;
@@ -212,8 +268,14 @@ button:hover {
   height: 40px;
   border-radius: 50%;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .hero .watch .play + p {
@@ -242,8 +304,14 @@ button:hover {
   margin-top: 140px;
 }
 .popular-courses-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .popular-courses-top .descript {
@@ -251,6 +319,8 @@ button:hover {
   width: 458px;
 }
 .popular-courses .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 18px;
 }
@@ -259,8 +329,14 @@ button:hover {
   height: 40px;
   border-radius: 50%;
   border: var(--color_one) 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
 }
@@ -281,7 +357,10 @@ button:hover {
   color: var(--color_one);
 }
 .popular-courses-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   gap: 30px;
   margin-top: 55px;
@@ -291,10 +370,15 @@ button:hover {
   overflow: hidden;
   border-radius: 12px;
   border: 1px solid #e2dfda;
-  transition: box-shadow 0.5s ease-in-out; /* Chuyển động mượt mà trong 0.5s */
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out; /* Chuyển động mượt mà trong 0.5s */
 }
 .popular-courses-bottom .course:hover {
   border: 1px solid transparent;
+  -webkit-box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.5);
 }
 .popular-courses-bottom .contain-thumb {
@@ -305,10 +389,17 @@ button:hover {
   width: 100%;
   border-radius: 12px 12px 0px 0px;
   height: 278px;
+  -o-object-fit: cover;
   object-fit: cover;
-  transition: transform 0.6s ease-in-out; /* Hiệu ứng mượt */
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  -o-transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out; /* Hiệu ứng mượt */
 }
 .popular-courses-bottom .thumb:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2); /* Phóng to 10% */
 }
 .popular-courses-bottom .course-info {
@@ -316,8 +407,14 @@ button:hover {
 }
 .popular-courses-bottom .h-course-info,
 .popular-courses-bottom .f-courses-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .popular-courses-bottom .h-course-info .heading-level-three,
@@ -328,7 +425,11 @@ button:hover {
   color: black;
 }
 .popular-courses-bottom .h-course-info .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   line-height: 0;
 }
@@ -340,8 +441,58 @@ button:hover {
 }
 .btn-four {
   border: none;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out; /* Chuyển màu nền trong 0.5s */
 }
 .popular-courses-bottom .btn-four:hover {
   background-color: var(--color_one);
+}
+.popular-courses-bottom .descript {
+  font-size: 1.4rem;
+}
+/* ---------------------feedback---------------------- */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0px;
+  background: #2e2100;
+}
+.feedback-item {
+  display: flex;
+}
+.feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+.feedback-item .name {
+  font-family: var(--font_title);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+  margin-bottom: 4px;
+  color: white;
+}
+.feedback-item .dots {
+  display: flex;
+  margin-top: 28px;
+  gap: 6px;
+}
+.feedback-item .dot {
+  width: 6px;
+  height: 6px;
+  background: #634700;
+  border-radius: 50%;
+}
+.feedback-item .feedback-content {
+  width: 66%;
+  margin-left: auto;
+}
+.feedback-item blockquote {
+  color: white;
+  font-size: 2.6rem;
+  font-style: italic;
+  line-height: 1.54;
 }
